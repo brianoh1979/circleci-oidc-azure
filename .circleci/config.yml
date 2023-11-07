@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  login-azire-with-oidc:
+  login-azure-with-oidc:
     docker:
       - image: cimg/azure:2023.07
     steps:
@@ -16,8 +16,8 @@ jobs:
       - run: az vm list
 
 workflows:
-  run:
+  run1:
     jobs:
-      - login-azire-with-oidc:
+      - login-azure-with-oidc:
           context:
             - oidc-azure
