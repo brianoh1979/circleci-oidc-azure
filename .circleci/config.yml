@@ -9,7 +9,6 @@ jobs:
           name: az login using OIDC
           command: |
             az login \
-                --allow-no-subscriptions \
                 --service-principal \
                 --user "${AZURE_CLIENT_ID}" \
                 --tenant "${AZURE_TENANT_ID}" \
@@ -17,7 +16,7 @@ jobs:
       - run: az vm list
 
 workflows:
-  run1:
+  run:
     jobs:
       - login-azure-with-oidc:
           context:
