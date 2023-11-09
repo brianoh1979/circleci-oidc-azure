@@ -20,4 +20,4 @@ workflows:
     jobs:
       - login-azure-with-oidc:
           context:
-            - oidc-azure
+            - OIDC-Azure
