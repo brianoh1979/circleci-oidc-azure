@@ -14,7 +14,7 @@ jobs:
                 --user "${AZURE_CLIENT_ID}" \
                 --tenant "${AZURE_TENANT_ID}" \
                 --federated-token "${CIRCLE_OIDC_TOKEN}"
-      - run: az account list
+      - run: az resource list
 
 workflows:
   run:
